@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_search.css' %}"/>
+    <!-- ----- подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ------------------ -->
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+
+        <section class="search-medicines">
+          <div class="search-medicines__container">
+<!-- -------------------------- -->
+          <div class="search-medicines__block">
+            <div class="search-medicines__content">
+              <div class="search-medicines__info"></div>
+              <!--<a href="Home.html"> -->
+              <a href="{% url 'home_page' %}">
+                <img class="search-medicines__logo" src="{% static 'img/logo.png' %}" alt="logo" />
+                <!--<img class="search-medicines__logo" src="img/logo.png" alt="logo" /> -->
+                <h1 class="search-medicines__title">UPITER</h1>
+            </a>
+              </div>
+              <!--<a href="Home.html"> -->
+              <a href="{% url 'home_page' %}">
+            <div class="search-medicines__subtitle">Назад</div>
+            </a>
+          </div>
+          </div>  
+          </div>
+          </section>
+
+          <section class = "about-medicines"></section>
+          
+            <div class="about-medicines__container">
+              <div class="about-medicines__content">
+                <div class="about-medicines__items">
+
+                  
+                  <div class="about-medicines__item">
+                    <div class="about-medicines__title">Синонимы лекарства</div>
+                    <div class="about-medicines__substance">
+                      <div class="about-medicines__href">
+                      <!--<a href="about_drug.html"> -->
+                      <a href="{% url 'about_drug_page' %}">
+                    <div class="about-medicines__text">Лекарство</div>
+                  </a>
+                </div>
+                    <div class="arrow">&#8594;</div>
+                    <div class="about-medicines__text">Активное вещество</div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class = "footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__items">
+                  <a href="" class="footer__link">
+                    О нас
+                  </a>
+                  <a href="" class="footer__link">
+                    Telegram
+                  </a>
+                  <a href="" class="footer__link">
+                    Google Play
+                  </a>
+                </div>
+                <div class="footer__author">
+                    © 2023 МГМУ им. Сеченова
+                </div>
+            </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_home.css' %}"/>
+    <!-- ----- подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ------------------ -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+    import App from './src/App.jsx';
+    ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+    <div class="wrapper">
+      <main class="main">
+
+        <section class="search-medicines">
+          <div class="search-medicines__container">
+<!-- --------------------------блок с информацией и поиском -->
+          <div class="search-medicines__block">
+            <div class="search-medicines__content">
+              <div class="search-medicines__info">
+                <img class="search-medicines__logo" src="{% static 'img/logo.png' %}" alt="logo" />
+                <!--<img class="search-medicines__logo" src="img/logo.png" alt="logo" /> -->
+                <h1 class="search-medicines__title">UPITER</h1>
+              </div>
+            <div class="search-medicines__subtitle">Найдите лекарства здесь</div>
+
+            <div class="search-medicines__choice">
+              <div class="search-medicines__checkbox">
+                <input
+                type="checkbox"
+                id="synonym"
+                name="synonym"
+                value="synonym"
+                checked
+                />
+                <label class="search-medicines__label" for="synonym">Искать синонимы</label>
+              </div>
+              <div class="search-medicines__checkbox">
+                <input
+                type="checkbox"
+                id="analog"
+                name="analog"
+                value="analog"
+                />
+                <label class="search-medicines__label" for="analog">Искать аналоги</label>
+              </div>
+              </div>
+
+            <div class="search-medicines__searching">
+
+              <input
+                type="search"
+                id = "search"
+                placeholder="название лекарства"
+                name="search"
+              />
+              <!--<a href="search.html">-->
+              <a href="{% url 'search_page' %}">
+                <button class="button__searching">Поиск</button>
+              </a>
+            </div>
+            </div>
+            <!-- --------------------------------------блок с картинками -->
+            <div class="search-medicines__images">
+              <img class="search-medicines__img-hand" src="{% static 'img/hand.png' %}" alt="hand" />
+              <img class="search-medicines__img-tablets" src="{% static 'img/tablets.png' %}" alt="tablets" />
+              <img class="search-medicines__img-decor_green" src="{% static 'img/decor_green-transformed.png' %}" alt="decor_green" />
+              <!--<img class = "search-medicines__img-hand" src="img/hand.png" alt="hand" /> -->
+              <!--<img class = "search-medicines__img-tablets" src="img/tablets.jpg" alt="tablets" /> -->
+              <!--<img class="search-medicines__img-decor_green" src="img/decor_green-transformed.png" alt="decor_green" > -->
+            </div>
+            </div>
+
+
+            
+          </div>
+          </section>
+          <section class = "about-medicines"></section>
+          
+            <div class="about-medicines__container">
+              <div class="about-medicines__content">
+                <div class="about-medicines__items">
+  
+                  <div class="about-medicines__item">
+                    <div class="about-medicines__title">Что такое синонимы лекарств?</div>
+                    <div class="about-medicines__text">Лекарства-синонимы имеют один и тот же состав по действующим веществам, но разные торговые наименования, поскольку производятся различными фирмами.</div>
+                  </div>
+  
+                  <div class="about-medicines__item">
+                    <div class="about-medicines__title">Что такое аналоги лекарств?</div>
+                    <div class="about-medicines__text">Аналоги - это те лекарства, которые содержат разные активные вещества, отличаются друг от друга названием, но используются для лечения одних и тех же заболеваний.</div>
+                  </div>
+  
+                  <div class="about-medicines__item">
+                    <div class="about-medicines__title">Безопасно ли использовать аналоги и синонимы лекарств?</div>
+                    <div class="about-medicines__text">Во многих случаях использование синонимов или аналогов лекарств абсолютно безопасно, но не делайте этого без консультации с Вашим лечащим врачом. Всегда лучше перестраховаться.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class = "footer">
+         <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__items">
+                  <a href="" class="footer__link">
+                    О нас
+                  </a>
+                  <a href="" class="footer__link">
+                    Telegram
+                  </a>
+                  <a href="" class="footer__link">
+                    Google Play
+                  </a>
+                </div>
+                <div class="footer__author">
+                    © 2023 МГМУ им. Сеченова
+                </div>
+            </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
